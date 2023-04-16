@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Hover</title>
+  </head>
+  <body>
+    <img id="img" src="https://picsum.photos/200/300" onmouseover="enlarge()" onmouseout="shrink()" />
+    <script>
+      function enlarge() {
+        document.getElementById("img").style.height = "200px";
+      }
+
+      function shrink() {
+        document.getElementById("img").style.height = "100px";
+      }
+    </script>
+  </body>
+</html>

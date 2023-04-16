@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Viewer</title>
+    <style>
+      img {
+        max-width: 100%;
+        max-height: 80vh;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img id="image" src="https://picsum.photos/id/237/200/300">
+    </div>
+    <div>
+      <button id="prev">Previous</button>
+      <button id="next">Next</button>
+    </div>
+    <script>
+      const images = [
+        "https://picsum.photos/id/237/200/300",
+        "https://picsum.photos/id/238/200/300",
+        "https://picsum.photos/id/239/200/300",
+        "https://picsum.photos/id/240/200/300"
+      ];
+      let currentIndex = 0;
+
+      const setImage = () => {
+        document.getElementById("image").src = images[currentIndex];
+      };
+
+      const goToNextImage = () => {
+        if (currentIndex < images.length - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        setImage();
+      };
+
+      const goToPreviousImage = () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = images.length - 1;
+        }
+        setImage();
+      };
+
+      setImage();
+
+      document.getElementById("next").addEventListener("click", goToNextImage);
+      document.getElementById("prev").addEventListener("click", goToPreviousImage);
+    </script>
+  </body>
+</html>
