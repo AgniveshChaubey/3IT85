@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+	<style type="text/css">
+		body{
+			background-color: rgba(240, 166, 37, 0.674);
+		}
+		form{
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		h1{
+			text-align: center;
+		}
+		table{
+			margin-left: auto;
+			margin-right: auto;
+			border-collapse: collapse;
+			width: 50%;
+		}
+		td{
+			padding: 10px;
+			text-align: left;
+		}
+		input[type="text"], input[type="email"], input[type="tel"], textarea{
+			padding: 5px;
+			width: 100%;
+		}
+		button{
+			padding: 5px;
+		}
+		select{
+			padding: 5px;
+			width: 100%;
+		}
+		input[type="radio"]{
+			margin-right: 10px;
+		}
+		input[type="submit"], input[type="reset"]{
+			padding: 5px 10px;
+			margin-top: 10px;
+			background-color: #af784c;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+		input[type="submit"]:hover, input[type="reset"]:hover{
+			background-color: #f4ad8f74;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td colspan="2"><h1>Registration Form</h1></td>
+			</tr>
+			<tr>
+				<td>User Id:</td>
+				<td><input type="text" name="first_name" required /></td>
+			</tr>
+			<tr>
+				<td>Name:</td>
+				<td><input type="text" name="last_name" required /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" name="email" required /></td>
+			</tr>
+			<tr>
+				<td>Mobile No.:</td>
+				<td><input type="tel" name="contact" pattern="[0-9]{10}" required /></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><textarea rows="5" cols="50" name="description"></textarea></td>
+			</tr>
+			<tr>
+				<td>Country:</td>
+				<td>
+					<select name="dropdown" required>
+						<option value="">(Please select a Country)</option>
+						<option value="India">India</option>
+						<option value="Pakistan">Pakistan</option>
+						<option value="Canada">Canada</option>
+						<option value="USA">USA</option>
+						<option value="Mexico">Mexico</option>
+						<option value="Other">Other</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Gender:</td>
+				<td>
+					<input type="radio" name="gender" value="male" required>Male
+					<input type="radio" name="gender" value="female" required>Female
+				</td>
+			</tr>
+			<tr>
+				<td>Upload CV:</td>
+				<td><input type="file" name="cv" /></td>
+			</tr>
+			<tr>
+      
+      <td>
+        <input type="submit" name="submit" value="Submit" />
+        <input type="reset" name="reset" value="Reset" />
+      </td>
+    </tr>
+  </form>
+</table>
