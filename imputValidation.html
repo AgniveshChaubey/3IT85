@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Agnivesh</h1>
+    <form onsubmit="return validateForm()">
+      <input type="text">
+      <button type="submit">Submit</button>
+      <script>
+        function validateForm() {
+  var inputs = document.getElementsByTagName("input");
+  for (var i = 0; i < inputs.length; i++) {
+    if (inputs[i].value == "") {
+      alert("Please fill in all the fields");
+      return false;
+    }
+  }
+  return true;
+}
+
+      </script>
+    </form>
+  </body>
+</html>
